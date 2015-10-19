@@ -1,0 +1,34 @@
+Scanner in = new Scanner(System.in);
+
+System.out.println("\n Please a mathematical operation:");
+String operation = in.nextLine();
+
+String arr[] = operation.split("[^0-9.]");
+
+boolean atleastOneAlpha = operation.matches(".*[a-zA-Z]+.*");
+
+if (!atleastOneAlpha) {
+	for (int i = 0; i < arr.length; i++){
+		println(i+": "+arr[i]);
+	}
+
+	double operand1 = Double.parseDouble(arr[0]);
+	double operand2 = Double.parseDouble(arr[1]);
+	println(operand1);
+	println(operand2);
+		
+	if (operation.contains("+")){
+		println(operand1 + operand2);
+	} 
+	if (operation.contains("-")){
+		println(operand1 - operand2);
+	}
+	if (operation.contains("*")){
+		println(operand1 * operand2);
+	}
+	if (operation.contains("/")){
+		println(operand1 / operand2);
+	}
+} else {
+	println("Not a valid mathematical operation");
+}

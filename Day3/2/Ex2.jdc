@@ -1,0 +1,30 @@
+Scanner in = new Scanner(System.in);
+
+System.out.println("\n Please enter your first number:");
+String input1 = in.nextLine();
+double operand1 = Double.parseDouble(input1);
+
+System.out.println("\n Please enter your second number: ");
+String input2 = in.nextLine();
+double operand2 = Double.parseDouble(input2);
+
+System.out.println("\n You chose "+operand1+" and "+operand2+" \n \n -- MENU -- \n 1: Addition \n 2: Subtraction \n 3: Multiplication \n 4: Division \n * Please chose a menu option *");
+int choice = in.nextInt();
+
+switch (choice) {
+	case 1:
+		println(operand1 + operand2);
+		break;
+	case 2:
+		println(operand1 - operand2);
+		break;
+	case 3:
+		println(operand1 * operand2);
+		break;
+	case 4:
+		println(operand1 / operand2);
+		break;
+	default:
+		println("Invalid choice");
+		break;
+}
